@@ -51,6 +51,8 @@ const VerifyOtp = () => {
                 {   
                     email,
                     otp: enteredOtp
+                },{
+                    withCredentials: true
                 }
             )
             if (res.data.success) {

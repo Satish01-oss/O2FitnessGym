@@ -34,8 +34,8 @@ router.post('/login', rateLimit, async (req, res) => {
 
     res.cookie('token' , token , {
         httpOnly: true,
-        secure : false,
-        sameSite: 'lax'
+        secure : true,
+        sameSite: 'none'
       })
 
     res.status(200).json({ 
@@ -116,8 +116,8 @@ router.post('/google', async function googleLogin(req, res) {
 
             res.cookie('token' , token , {
                 httpOnly: true,
-                secure : false,
-                sameSite: 'lax',
+                secure : true,
+                sameSite: 'none',
               })
 
               

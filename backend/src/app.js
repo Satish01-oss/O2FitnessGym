@@ -18,6 +18,7 @@ app.use(cors({
     origin: process.env.API_URL,
     credentials: true
 }));
+app.set('trust proxy', 1);
 
 
 app.use('/api/auth', authRouter);

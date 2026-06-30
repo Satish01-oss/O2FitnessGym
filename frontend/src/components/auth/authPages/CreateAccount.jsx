@@ -25,7 +25,9 @@ const CreateAccount = () => {
         onSubmit = {async (data) =>{
           try {
                 const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`,
-                  data )
+                  data , {
+                    withCredentials: true
+                  } )
 
                 console.log(res.data);
 
