@@ -1,0 +1,187 @@
+@import "tailwindcss";
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: #140f23;
+  margin: 0;
+  padding: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* YOUR CSS */
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 28px !important;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+/* Background container */
+.main{
+  height:90vh;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+
+  background-image:url("download-1.jpg");
+  background-size:cover;
+  background-position:center;
+}
+
+/* Glass card */
+form{
+  height: auto;
+  width:70%;
+  max-width:350px;
+  padding:40px 30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  gap:20px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* Title */
+form h1{
+  font-size:24px;
+  font-weight:500;
+  color: white;
+}
+
+/* Input wrapper */
+.content{
+  width:100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Inputs */
+form input{
+  width:100%;
+  padding:12px 0;
+
+  border:none;
+  border-bottom:2px solid white;
+
+  background:transparent;
+  color:white;
+  font-size:16px;
+  outline:none;
+}
+
+/* Placeholder */
+form input::placeholder{
+  color:rgba(255,255,255,0.7);
+}
+
+/* Button */
+form button{
+  width:50%;
+  padding:10px 10px;
+
+  border:none;
+  border-radius:6px;
+
+  background:#aaa;
+  color:black;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* Icon */
+.main i{
+  position:absolute;
+  bottom:90%;
+  font-size:60px;
+  color: white;
+}
+
+/* Mobile adjustments */
+/* @media (max-width:480px){
+
+  form{
+    padding:30px 20px;
+  }
+
+  form h1{
+    font-size:20px;
+  }
+
+} */
+
+.main::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+}
+
+form{
+  position:relative;
+  z-index:1;
+}
+
+form p span{
+  color:#aaa;
+  text-decoration: underline;
+  cursor: pointer;
+}
+form p{
+  color:white;
+}
+
+.otp-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.otp-container input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.otp-container input:focus {
+  border-color: #007bff;
+}
