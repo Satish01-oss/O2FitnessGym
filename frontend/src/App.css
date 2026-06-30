@@ -48,7 +48,7 @@ html,body{
   overflow: hidden;
   position: relative;
 
-  background-image:url("download-1.jpg");
+  background-image:url("/frontend/public/download-1.jpg");
   background-size:cover;
   background-position:center;
 }
